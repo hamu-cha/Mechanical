@@ -22,11 +22,11 @@ with col1:
 
 with col2:
     omega = st.slider("角速度", 1.0, 3.0, 2.0, 0.1)
+    
 t_frames = 120
 
 # Animation controller
 btn = set.AnimationController(t_frames)
-
 btn.layout()
 
 # Display options
@@ -60,7 +60,7 @@ ay = -R * omega**2 * np.sin(theta)
 a_abs = np.sqrt(ax**2 + ay**2)
 
 # Create figure
-fig, ax_fig = plt.subplots(figsize=(7, 7))
+fig, ax_fig = plt.subplots(figsize=(6, 6))
 
 # Circular trajectory
 th = np.linspace(0, 2*np.pi, 361)
